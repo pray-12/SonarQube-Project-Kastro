@@ -3,33 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kastro's App</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>Spotify App</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body{
+            background: #121212;
+            color: white;
+        }
+
+        /* Navbar */
+        .navbar{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 60px;
+            background: #000;
+        }
+
+        .logo{
+            font-size: 28px;
+            font-weight: bold;
+            color: #1DB954;
+        }
+
+        .nav-links a{
+            text-decoration: none;
+            color: white;
+            margin-left: 20px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover{
+            color: #1DB954;
+        }
+
+        /* Hero Section */
+        .hero{
+            height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                        url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero h1{
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
+        .hero p{
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .btn{
+            padding: 14px 30px;
+            background: #1DB954;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover{
+            background: #17a74a;
+            transform: scale(1.05);
+        }
+
+        /* Features */
+        .features{
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 60px;
+            flex-wrap: wrap;
+        }
+
+        .card{
+            background: #181818;
+            padding: 30px;
+            width: 300px;
+            border-radius: 15px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .card:hover{
+            transform: translateY(-10px);
+            background: #282828;
+        }
+
+        .card h3{
+            margin-bottom: 15px;
+            color: #1DB954;
+        }
+
+        /* Footer */
+        footer{
+            background: #000;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
 </head>
+
 <body>
-    <div class="app-container">
-        <!-- Welcome Message -->
-        <h1 class="app-title">Welcome to Kastro's App</h1>
 
-        <!-- Buttons with YouTube Icons for Docker and Nexus Courses -->
-        <div class="youtube-links">
-            <a href="https://www.youtube.com/playlist?list=PLs-PsDpuAuTeNx3OgGQ1QrpNBo-XE6VBh" target="_blank" class="youtube-button">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/YouTube_icon_%282013-2017%29.png" alt="YouTube Icon" class="youtube-icon">
-                Click Here for Docker Course
-            </a>
-            <a href="https://www.youtube.com/watch?v=opJAfDOCZuI" target="_blank" class="youtube-button">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/YouTube_icon_%282013-2017%29.png" alt="YouTube Icon" class="youtube-icon">
-                Click Here for Nexus Course
-            </a>
-        </div>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">SpotifyApp</div>
 
-        <!-- Footer Message -->
-        <div class="footer">
-            <h2 class="footer-message">Congratulations for learning SonarQube</h2>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Features</a>
+            <a href="#">Playlist</a>
+            <a href="#">Contact</a>
         </div>
     </div>
 
-    <script src="app.js"></script>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Feel The Music</h1>
+        <p>Listen to millions of songs anytime, anywhere.</p>
+
+        <button class="btn">Start Listening</button>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+
+        <div class="card">
+            <h3>Unlimited Songs</h3>
+            <p>Stream millions of songs without interruption.</p>
+        </div>
+
+        <div class="card">
+            <h3>Create Playlists</h3>
+            <p>Create and manage your own playlists easily.</p>
+        </div>
+
+        <div class="card">
+            <h3>High Quality Audio</h3>
+            <p>Enjoy crystal clear music experience.</p>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Spotify App | DevOps Project</p>
+    </footer>
+
 </body>
 </html>
